@@ -44,10 +44,11 @@ function HomeAdmin() {
     const response = await axios.delete(
       `https://jsd5-mock-backend.onrender.com/member/${id}`
     );
-    if (response.status === 200) {
-      setReload(!reload);
-    }
-    console.log(response);
+    console.log(response)
+    // if (response.status === 200) {
+    //   setReload(!reload);
+    // }
+    // console.log(response);
   };
 
   return (
