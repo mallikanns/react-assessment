@@ -7,16 +7,16 @@ function HomeNormal() {
     <>
       <Navbar />
       <div>
-        <h1>
+        <h1 className="header">
           Generation Thailand
           <br />
           React Assessment
         </h1>
         <Link to='/user'>
-            <button>User Home Sector</button>
+            <button className="home-button">User Home Sector</button>
         </Link>
         <Link to='/admin'>
-            <button>Admin Home Sector</button>
+            <button className="home-button">Admin Home Sector</button>
         </Link>
       </div>
     </>
