@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
 
-function HomeNormal() {
+function HomeNormal({mockEmployees}) {
   return (
     <Layout>
       <div>

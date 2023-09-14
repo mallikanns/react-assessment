@@ -5,19 +5,43 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Layout from "./Layout";
 
+let mockEmployees = [
+    {
+      id: 0,
+      name: "mock",
+      lastname: "mocklastname",
+      position: "Manager",
+    },
+    {
+      id: 1,
+      name: "employee 1",
+      lastname: "em",
+      position: "Engineer",
+    },
+    {
+      id: 2,
+      name: "employee 2",
+      lastname: "lord",
+      position: "Designer",
+    },
+  ];
+
+
 function HomeAdmin() {
   const [members, setMembers] = useState([]);
   const [name, setName] = useState("");
   const [lastname, setLastname] = useState("");
   const [position, setPosition] = useState("");
-  console.log(name,lastname,position)
+  const [data, setData] = useState([]);
+//   const [reload, setReload] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(
         "https://jsd5-mock-backend.onrender.com/members"
       );
-      setMembers(response.data);
+      setData([...mockEmployees, ...response.data]);
+    //   setMembers(response.data);
     };
     getData();
   }, []);
@@ -109,7 +133,7 @@ function HomeAdmin() {
           </tr>
         </thead>
         <tbody>
-          {members.map((member) => (
+          {data.map((member) => (
             <tr key={member.id}>
               <td>{member.name}</td>
               <td>{member.lastname}</td>
