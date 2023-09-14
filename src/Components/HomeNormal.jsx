@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import Layout from "./Layout";
 
 function HomeNormal() {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div>
         <h1 className="header">
           Generation Thailand
@@ -19,7 +19,7 @@ function HomeNormal() {
             <button className="home-button">Admin Home Sector</button>
         </Link>
       </div>
-    </>
+    </Layout>
   );
 }
 

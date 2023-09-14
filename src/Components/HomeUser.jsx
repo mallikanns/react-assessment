@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import Layout from "./Layout";
 
 function HomeUser() {
   const [members,setMembers] = useState([]);
@@ -15,8 +16,7 @@ function HomeUser() {
   },[]);
 
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <div>
         <h1 className="header">
           Generation Thailand
@@ -48,7 +48,7 @@ function HomeUser() {
             ))}
         </tbody>
       </table>
-    </div>
+    </Layout>
   );
 }
 

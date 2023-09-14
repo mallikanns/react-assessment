@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
+import Layout from "./Layout";
 
 function HomeAdmin() {
   const [members, setMembers] = useState([]);
@@ -50,8 +51,7 @@ function HomeAdmin() {
   };
 
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <div>
         <h1 className="header">
           Generation Thailand
@@ -120,7 +120,7 @@ function HomeAdmin() {
           ))}
         </tbody>
       </table>
-    </div>
+    </Layout>
   );
 }
 
