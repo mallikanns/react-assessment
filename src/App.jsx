@@ -26,7 +26,7 @@ import HomeNormal from './Components/HomeNormal'
 function App() {
   return (
     <>
-      <HomeNormal mockEmployees={mockEmployees} />
+      <HomeNormal />
     </>
   )
 }
